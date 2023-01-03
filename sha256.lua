@@ -1,4 +1,4 @@
---
+--[[
 --  Adaptation of the Secure Hashing Algorithm (SHA-244/256)
 --  Found Here: http://lua-users.org/wiki/SecureHashAlgorithm
 --
@@ -6,9 +6,9 @@
 --  Found Here: https://bitbucket.org/Boolsheet/bslf/src/1ee664885805/bit.lua
 --
 --  Adapted into a single function by GravityScore
---
+--]]
 
-local function sha256(msg)
+function sha256(msg)
         local function band(int1, int2, int3, ...)
                 int1 = int1 % 2^32
                 int2 = int2 % 2^32
@@ -204,6 +204,7 @@ local function sha256(msg)
         return str2hexa(num2s(H[1], 4) .. num2s(H[2], 4) .. num2s(H[3], 4) .. num2s(H[4], 4) ..
                 num2s(H[5], 4) .. num2s(H[6], 4) .. num2s(H[7], 4) .. num2s(H[8], 4))
 end
-
+--[[
 test = sha256("");
 print(test);
+--]]
