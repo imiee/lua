@@ -204,7 +204,7 @@ function sha256(msg)
         return str2hexa(num2s(H[1], 4) .. num2s(H[2], 4) .. num2s(H[3], 4) .. num2s(H[4], 4) ..
                 num2s(H[5], 4) .. num2s(H[6], 4) .. num2s(H[7], 4) .. num2s(H[8], 4))
 end
+
 --[[
-test = sha256("");
-print(test);
+sha256("");
 --]]
